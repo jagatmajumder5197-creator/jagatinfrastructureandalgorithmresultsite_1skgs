@@ -708,3 +708,42 @@ body {
   color: #0f4c3a !important;
   border: 1px solid #8ecdc0 !important;
 }
+
+
+
+
+div[class*="report"], div[id*="report"], .report-card, #reportCard, #report-card {
+  background: 
+    radial-gradient(circle at 10% 20%, #e2f1f8 0%, transparent 45%),
+    radial-gradient(circle at 90% 85%, #e0f2f1 0%, transparent 45%),
+    radial-gradient(circle at 50% 50%, #d8efe6 0%, #f4faf7 100%) !important;
+  border: 2px solid #8c7b4e !important;
+  outline: 1px solid #a3c2b8 !important;
+}
+
+div[class*="report"] table, div[id*="report"] table, .report-card table {
+  background-color: transparent !important;
+}
+
+div[class*="report"] th, div[id*="report"] th, 
+div[class*="report"] td[class*="header"], div[id*="report"] td[class*="header"],
+div[class*="report"] tr:first-child td, div[id*="report"] tr:first-child td,
+.report-card th {
+  background-color: #d1eae5 !important;
+  color: #0f2d2e !important;
+  border: 1px solid #a8d3c7 !important;
+}
+
+div[class*="report"] td, div[id*="report"] td, .report-card td {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  border: 1px solid #c2e2d8 !important;
+  color: #2d3748 !important;
+}
+
+div[class*="report"] button, div[id*="report"] button,
+div[class*="report"] .btn, div[id*="report"] .btn,
+div[class*="report"] a, div[id*="report"] a {
+  background: linear-gradient(135deg, #b4e2da 0%, #9edcd1 100%) !important;
+  color: #0f4c3a !important;
+  border: 1px solid #8ecdc0 !important;
+}
