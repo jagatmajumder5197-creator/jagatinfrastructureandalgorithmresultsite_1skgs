@@ -660,3 +660,51 @@ body {
     page-break-inside: avoid;
   }
 }
+
+.report-card-container {
+  background: 
+    radial-gradient(circle at 10% 20%, #e2f1f8 0%, transparent 45%),
+    radial-gradient(circle at 90% 85%, #fff6df 0%, transparent 45%),
+    radial-gradient(circle at 50% 50%, #d8efe6 0%, #f4faf7 100%) !important;
+  border: 2px solid #8c7b4e !important;
+  outline: 1px solid #a3c2b8 !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+}
+
+.student-info-table td.label-cell,
+.grading-scale-header {
+  background-color: #dbeee9 !important;
+  border: 1px solid #b8d8cf !important;
+  color: #1a3636 !important;
+}
+
+.marks-table th,
+.compulsory-subject-header {
+  background-color: #d1eae5 !important;
+  color: #0f2d2e !important;
+  border: 1px solid #a8d3c7 !important;
+}
+
+.report-card table td {
+  background-color: rgba(255, 255, 255, 0.88) !important;
+  border: 1px solid #c2e2d8 !important;
+  color: #2d3748 !important;
+}
+
+.summary-row {
+  background-color: #e2f3ee !important;
+  border: 1px solid #b0dacd !important;
+}
+
+.btn-print {
+  background: linear-gradient(135deg, #cbe5f6 0%, #b4e2da 100%) !important;
+  color: #1b4965 !important;
+  border: 1px solid #a8d5e5 !important;
+}
+
+.btn-download {
+  background: linear-gradient(135deg, #b4e2da 0%, #9edcd1 100%) !important;
+  color: #0f4c3a !important;
+  border: 1px solid #8ecdc0 !important;
+}
