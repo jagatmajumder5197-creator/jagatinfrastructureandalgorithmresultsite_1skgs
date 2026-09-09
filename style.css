@@ -747,35 +747,3 @@ div[class*="report"] a, div[id*="report"] a {
   color: #0f4c3a !important;
   border: 1px solid #8ecdc0 !important;
 }
-
-
-
-html, body {
-  background: 
-    radial-gradient(circle at 10% 20%, #e2f1f8 0%, transparent 45%),
-    radial-gradient(circle at 90% 85%, #e0f2f1 0%, transparent 45%),
-    radial-gradient(circle at 50% 50%, #d8efe6 0%, #f4faf7 100%) !important;
-  background-attachment: fixed !important;
-}
-
-body * {
-  background-color: transparent !important;
-}
-
-table th, td[class*="header"], .label-cell {
-  background-color: #d1eae5 !important;
-  color: #0f2d2e !important;
-  border: 1px solid #a8d3c7 !important;
-}
-
-table td {
-  background-color: rgba(255, 255, 255, 0.9) !important;
-  color: #2d3748 !important;
-  border: 1px solid #c2e2d8 !important;
-}
-
-button, .btn {
-  background: linear-gradient(135deg, #b4e2da 0%, #9edcd1 100%) !important;
-  color: #0f4c3a !important;
-  border: 1px solid #8ecdc0 !important;
-}
