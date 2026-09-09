@@ -1,7 +1,7 @@
 /* ============================================================
    SHRIPUR KINDERGARTEN SCHOOL — Result Portal CSS
    Jagat Infrastructure & Algorithm
-   (Vintage Certificate Design — cohesive redesign)
+   (Soft Pastel Certificate Design — cohesive redesign)
    ============================================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&display=swap');
@@ -13,8 +13,13 @@
   font-family: Arial, sans-serif;
 }
 
+/* সফট পেস্টেল মেস/ফ্লুইড ব্যাকগ্রাউন্ড */
 body {
-  background: #a5d3ca;
+  background: 
+    radial-gradient(circle at 10% 20%, #e2f1f8 0%, transparent 45%),
+    radial-gradient(circle at 90% 85%, #fff6df 0%, transparent 45%),
+    radial-gradient(circle at 50% 50%, #d8efe6 0%, #f4faf7 100%);
+  background-attachment: fixed;
   padding: 20px;
 }
 
@@ -22,11 +27,14 @@ body {
   --navy: #001f3f;
   --navy-dark: #001428;
   --gold: #c9a227;
+  --gold-bronze: #8c7b4e;
   --gold-light: #e8d9a0;
   --gold-pale: #fff3d6;
   --cream: #f7f1e1;
   --cream-dark: #efe4c4;
-  --maroon: #8c1a1a;
+  --teal-dark: #1a4d43;
+  --teal-soft: #b4e2da;
+  --teal-border: #8ecdc0;
   --pink-pale: #fdf0f2;
   --pink-light: #f8dde2;
 }
@@ -44,7 +52,7 @@ body {
   border: 3px solid var(--navy);
   padding: 4px;
   background: #fff;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
 }
 
 /* =========================
@@ -61,23 +69,23 @@ body {
 
 .portal-container h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 800;
-  color: var(--navy);
+  color: var(--gold-bronze);
   margin-bottom: 8px;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.5px;
 }
 
 .portal-container h2 {
-  font-size: 16px;
-  color: var(--green);
+  font-size: 15px;
+  color: #4a5568;
   font-weight: 700;
   margin-bottom: 8px;
 }
 
 .portal-container h3 {
-  font-size: 19px;
-  color: #555;
+  font-size: 17px;
+  color: var(--navy);
   font-weight: 700;
   margin-bottom: 30px;
 }
@@ -92,7 +100,7 @@ body {
   align-items: center;
   gap: 10px;
   margin-bottom: 20px;
-  color: #0b5394;
+  color: var(--teal-dark);
   font-size: 15px;
   font-weight: bold;
 }
@@ -100,8 +108,8 @@ body {
 .loader {
   width: 36px;
   height: 36px;
-  border: 4px solid #cdd6e0;
-  border-top-color: var(--gold);
+  border: 4px solid #c2d6ce;
+  border-top-color: var(--gold-bronze);
   border-radius: 50%;
   animation: spin 0.8s linear infinite;
 }
@@ -134,19 +142,21 @@ body {
   height: 55px;
   margin-bottom: 20px;
   border-radius: 10px;
-  border: 2px solid #cdd6e0;
+  border: 2px solid #c2d6ce;
   font-size: 17px;
   font-weight: bold;
   text-align: center;
-  color: #0b5394;
-  background: #fff;
+  color: #2c3e50;
+  background: rgba(255, 255, 255, 0.95);
   cursor: pointer;
-  transition: border-color 0.2s;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.03);
 }
 
 .portal-container select:focus {
   outline: none;
-  border-color: #0b5394;
+  border-color: var(--teal-border);
+  box-shadow: 0 0 0 3px rgba(142, 205, 192, 0.25);
 }
 
 .portal-container select:disabled {
@@ -154,21 +164,23 @@ body {
   cursor: not-allowed;
 }
 
+/* ভিউ রেজাল্ট বাটন (পেস্টেল টিল গ্রাডিয়েন্ট) */
 .portal-container button {
   width: 100%;
   height: 55px;
-  border: none;
+  border: 1px solid var(--teal-border);
   border-radius: 10px;
-  background: #008000;
-  color: #fff;
+  background: linear-gradient(135deg, #b4e2da 0%, #9edcd1 100%);
+  color: var(--teal-dark);
   font-size: 20px;
   font-weight: bold;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 3px 8px rgba(158, 220, 209, 0.4);
 }
 
 .portal-container button:hover:not(:disabled) {
-  background: #006600;
+  background: linear-gradient(135deg, #9edcd1 0%, #8ecdc0 100%);
 }
 
 .portal-container button:disabled {
@@ -201,19 +213,17 @@ body {
   border: 2px solid var(--gold);
   box-shadow: 0 4px 20px rgba(0,0,0,0.12), inset 0 0 0 5px #fff;
 
-  /* Base fill + 4-corner decorative brackets, all via background layers
-     so they render on screen, print AND html2pdf export alike */
   background-repeat: no-repeat;
   background-image:
-    linear-gradient(var(--gold), var(--gold)), /* TL horizontal */
-    linear-gradient(var(--gold), var(--gold)), /* TL vertical */
-    linear-gradient(var(--gold), var(--gold)), /* TR horizontal */
-    linear-gradient(var(--gold), var(--gold)), /* TR vertical */
-    linear-gradient(var(--gold), var(--gold)), /* BL horizontal */
-    linear-gradient(var(--gold), var(--gold)), /* BL vertical */
-    linear-gradient(var(--gold), var(--gold)), /* BR horizontal */
-    linear-gradient(var(--gold), var(--gold)), /* BR vertical */
-    radial-gradient(ellipse at top left, #fffefb 0%, var(--cream) 55%, var(--cream-dark) 100%); /* card fill */
+    linear-gradient(var(--gold), var(--gold)),
+    linear-gradient(var(--gold), var(--gold)),
+    linear-gradient(var(--gold), var(--gold)),
+    linear-gradient(var(--gold), var(--gold)),
+    linear-gradient(var(--gold), var(--gold)),
+    linear-gradient(var(--gold), var(--gold)),
+    linear-gradient(var(--gold), var(--gold)),
+    linear-gradient(var(--gold), var(--gold)),
+    radial-gradient(ellipse at top left, #fffefb 0%, var(--cream) 55%, var(--cream-dark) 100%);
   background-size:
     42px 3px, 3px 42px,
     42px 3px, 3px 42px,
@@ -289,7 +299,7 @@ body {
   font-family: 'Playfair Display', serif;
   font-size: 22px;
   font-weight: 800;
-  color: var(--navy);
+  color: var(--gold-bronze);
   letter-spacing: 0.2px;
   margin: 0 0 5px 0;
   text-transform: uppercase;
@@ -315,6 +325,7 @@ body {
   margin: 0 10px;
 }
 
+/* PROGRESS REPORT রিবন (মেরুনের বদলে ব্রোঞ্জ/অলিভ গোল্ড টোন) */
 .header-center h3 {
   display: inline-block;
   margin: 6px auto 0 auto;
@@ -323,15 +334,15 @@ body {
   font-weight: 700;
   letter-spacing: 2px;
   color: #fff;
-  background: linear-gradient(180deg, var(--maroon), #6e1212);
+  background: linear-gradient(180deg, var(--gold-bronze), #6e603b);
   padding: 5px 28px;
   clip-path: polygon(3% 0, 97% 0, 100% 50%, 97% 100%, 3% 100%, 0% 50%);
   text-align: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 
 /* =========================
-   STUDENT DETAILS + GRADING (SIDE BY SIDE)
+   STUDENT DETAILS + GRADING
 ========================= */
 
 .top-info-row {
@@ -409,7 +420,6 @@ body {
   font-weight: bold;
 }
 
-/* Pastel color-coded grade rows, matching the sample template */
 .grading-table tbody tr:nth-child(1) td { background: #f6c6c6; }
 .grading-table tbody tr:nth-child(2) td { background: #e9dca0; }
 .grading-table tbody tr:nth-child(3) td { background: #bfe3ab; }
@@ -441,8 +451,7 @@ body {
 }
 
 /* =========================
-   RESULT TABLE (bigger text, gap column between
-   Full Marks and Obtained Marks groups, bold obtained side)
+   RESULT TABLE
 ========================= */
 
 .result-table {
@@ -457,7 +466,7 @@ body {
   padding: 10px 6px;
   text-align: center;
   font-size: 14px;
-  background: var(--pink-pale);
+  background: #fbfdfc;
 }
 
 .result-table th {
@@ -468,7 +477,7 @@ body {
 }
 
 .result-table tbody tr:nth-child(even) {
-  background: var(--pink-light);
+  background: #f2f9f6;
 }
 
 .result-table td:first-child {
@@ -479,9 +488,6 @@ body {
   font-size: 14px;
 }
 
-/* Subtle divider between "Full Marks" and "Obtained Marks" groups —
-   a thin double-line instead of a big block, so the table still reads
-   as one continuous card instead of two broken halves. */
 .result-table thead tr:first-child th:nth-child(2) {
   border-right: 3px double var(--navy);
 }
@@ -494,7 +500,6 @@ body {
   border-right: 3px double var(--navy);
 }
 
-/* Obtained Marks side (Written, Oral, Total, %, Grade) — bold & fully clear */
 .result-table tbody td:nth-child(n+5) {
   font-weight: 900;
   color: #000;
@@ -508,7 +513,7 @@ body {
 }
 
 /* =========================
-   FINAL SUMMARY (light, high-contrast highlight)
+   FINAL SUMMARY
 ========================= */
 
 .final-summary {
@@ -521,7 +526,7 @@ body {
   border: 2px solid var(--navy);
   border-radius: 6px;
   overflow: hidden;
-  box-shadow: 0 3px 10px rgba(201, 162, 39, 0.35);
+  box-shadow: 0 3px 10px rgba(201, 162, 39, 0.25);
 }
 
 .final-summary th,
@@ -539,13 +544,10 @@ body {
   letter-spacing: 0.5px;
 }
 
-/* Light pink highlight — matches the Assessment table's soft pastel tone
-   for visual consistency, with plain bold sans-serif numerals (not the
-   ornamental font) for maximum legibility of the actual marks/%/grade/rank. */
 .final-summary td {
   font-size: 17px;
   color: var(--navy-dark);
-  background: var(--pink-light);
+  background: #eaf5f2;
   font-weight: 800;
   font-family: Arial, sans-serif;
 }
@@ -558,7 +560,7 @@ body {
 }
 
 /* =========================
-   VERIFIED NOTE
+   VERIFIED NOTE & SIGNATURE
 ========================= */
 
 .verified-note {
@@ -568,10 +570,6 @@ body {
   font-weight: bold;
   font-size: 14px;
 }
-
-/* =========================
-   SIGNATURE
-========================= */
 
 .signature-area {
   display: flex;
@@ -617,18 +615,18 @@ body {
 
 .action-buttons button {
   padding: 10px 30px;
-  border: none;
+  border: 1px solid var(--teal-border);
   border-radius: 8px;
-  background: linear-gradient(180deg, var(--navy), var(--navy-dark));
-  color: #fff;
+  background: linear-gradient(135deg, #b4e2da 0%, #9edcd1 100%);
+  color: var(--teal-dark);
   font-size: 15px;
   font-weight: bold;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: all 0.2s;
 }
 
 .action-buttons button:hover {
-  background: var(--navy-dark);
+  background: linear-gradient(135deg, #9edcd1 0%, #8ecdc0 100%);
 }
 
 /* =========================
@@ -641,20 +639,13 @@ body {
 }
 
 @media print {
-
   body {
     background: #fff;
     padding: 0;
   }
 
-  .portal-container {
-    display: none;
-  }
-
-  .action-buttons {
-    display: none;
-  }
-
+  .portal-container,
+  .action-buttons,
   .verified-note {
     display: none;
   }
@@ -668,5 +659,4 @@ body {
     border: none;
     page-break-inside: avoid;
   }
-
 }
