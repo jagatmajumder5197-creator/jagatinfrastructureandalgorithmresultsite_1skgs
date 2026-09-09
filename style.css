@@ -14,7 +14,7 @@
 }
 
 body {
-  background: #ece5d3;
+  background: #a5d3ca;
   padding: 20px;
 }
 
@@ -36,8 +36,8 @@ body {
 ========================= */
 
 .portal-logo {
-  width: 90px;
-  height: 90px;
+  width: 100px;
+  height: 100px;
   object-fit: contain;
   border-radius: 50%;
   margin-bottom: 15px;
@@ -70,7 +70,7 @@ body {
 
 .portal-container h2 {
   font-size: 16px;
-  color: var(--maroon);
+  color: var(--green);
   font-weight: 700;
   margin-bottom: 8px;
 }
